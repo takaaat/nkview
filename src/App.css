@@ -1,42 +1,75 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.lyrics-screen {
+  min-height: 100vh;
+  background-color: #b30000;
+  padding: 48px 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  font-family: 'Yu Mincho', 'Noto Serif JP', 'Noto Serif KR', 'Batang', serif;
+  color: #ffffff;
+  gap: 32px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.lyrics-horizontal {
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lyrics-line {
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.lyrics-word-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-end;
 }
 
-.card {
-  padding: 2em;
+.word-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 64px;
 }
 
-.read-the-docs {
-  color: #888;
+.lyrics-kanji {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: 0.16em;
+  color: #ffd966;
+  min-height: 1.4rem;
+}
+
+.lyrics-kanji.placeholder {
+  visibility: hidden;
+}
+
+.lyrics-original-word {
+  font-size: 2.6rem;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.lyrics-reading-word {
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.lyrics-translation {
+  margin-left: auto;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  line-height: 1.8;
+  color: #ffe066;
+  max-height: 80vh;
+  white-space: pre-wrap;
 }
